@@ -105,7 +105,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#2563eb" />
         <meta name="msapplication-TileColor" content="#2563eb" />
         
+        {/* Google AdSense */}
+        <meta name="google-adsense-account" content="ca-pub-1975571206726620" />
+        
         {/* Additional meta tags */}
+        <meta name="author" content="CaseGrid Team" />
         <meta name="application-name" content="CaseGrid" />
         <meta name="apple-mobile-web-app-title" content="CaseGrid" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
