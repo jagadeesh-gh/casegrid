@@ -76,6 +76,9 @@ export default function ActsPage() {
               <Link href="/acts" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200" aria-current="page">
                 Acts/Rules
               </Link>
+              <Link href="/request" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+                Request Missing Act/Rule
+              </Link>
             </nav>
           </div>
         </div>

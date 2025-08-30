@@ -108,6 +108,19 @@ export default function RootLayout({
         {/* Google AdSense */}
         <meta name="google-adsense-account" content="ca-pub-1975571206726620" />
         
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8Q9RZLGYC"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-E8Q9RZLGYC');
+            `
+          }}
+        />
+        
         {/* Additional meta tags */}
         <meta name="author" content="CaseGrid Team" />
         <meta name="application-name" content="CaseGrid" />

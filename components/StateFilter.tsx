@@ -40,7 +40,7 @@ export default function StateFilter() {
           <option value="">Select a state</option>
           {INDIAN_STATES.map((state) => (
             <option key={state} value={state}>
-              {state === 'Central' ? 'Central (All States)' : state}
+              {state === 'Central' ? 'Central' : state}
             </option>
           ))}
         </select>

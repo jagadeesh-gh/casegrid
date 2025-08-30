@@ -1,8 +1,14 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 import SearchBar from '@/components/SearchBar';
 import StateFilter from '@/components/StateFilter';
+import StateCoverageModal from '@/components/StateCoverageModal';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 font-sans">
       {/* Header */}
@@ -26,6 +32,10 @@ export default function Home() {
               </Link>
               <Link href="/acts" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group font-sans">
                 Acts/Rules
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+              </Link>
+              <Link href="/request" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group font-sans">
+                Request Missing Act/Rule
                 <span className="absolute inset-x-0 bottom-0 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
               </Link>
             </nav>
@@ -81,6 +91,51 @@ export default function Home() {
           </div>
         </section>
 
+        {/* State Coverage Banner */}
+        <section className="mb-20" aria-labelledby="coverage-heading">
+          <div className="max-w-4xl mx-auto">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="w-full group bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-6 hover:border-blue-300 hover:from-blue-100 hover:to-indigo-100 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg text-left"
+              aria-label="View current state coverage and roadmap"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h2 id="coverage-heading" className="text-2xl font-bold text-blue-900 font-display">
+                  Current State Coverage
+                </h2>
+                <div className="flex items-center space-x-2 text-blue-600 group-hover:text-blue-700 transition-colors duration-200">
+                  <span className="text-sm font-medium font-sans">View Details</span>
+                  <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div className="bg-green-100 border border-green-200 rounded-lg p-3 text-center">
+                  <div className="text-lg font-bold text-green-700 font-display">7</div>
+                  <div className="text-sm text-green-600 font-sans">States Available</div>
+                </div>
+                <div className="bg-orange-100 border border-orange-200 rounded-lg p-3 text-center">
+                  <div className="text-lg font-bold text-orange-700 font-display">29</div>
+                  <div className="text-sm text-orange-600 font-sans">Coming Soon</div>
+                </div>
+                <div className="bg-blue-100 border border-blue-200 rounded-lg p-3 text-center">
+                  <div className="text-lg font-bold text-blue-700 font-display">19%</div>
+                  <div className="text-sm text-blue-600 font-sans">Coverage</div>
+                </div>
+              </div>
+              
+              <p className="text-blue-800 font-sans">
+                <strong>Currently available:</strong> Central, Maharashtra, West Bengal, Rajasthan, Madhya Pradesh, Karnataka, Tamil Nadu. 
+                <span className="block mt-2 text-sm">
+                  Click to see our complete roadmap and which states are coming next!
+                </span>
+              </p>
+            </button>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-20" aria-labelledby="features-heading">
           <h2 id="features-heading" className="sr-only">Platform Features</h2>
@@ -90,7 +145,7 @@ export default function Home() {
             <div className="relative z-10">
               <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300" aria-hidden="true">
                 <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300 font-display">Advanced Search</h3>
@@ -189,6 +244,12 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* State Coverage Modal */}
+      <StateCoverageModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 }
