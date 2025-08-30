@@ -69,33 +69,36 @@ export default function Pagination({
       </div>
 
       {/* Pagination controls */}
-      <div className="flex items-center space-x-2 flex-shrink-0">
+      <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0 overflow-hidden max-w-full">
         {/* Previous button */}
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="relative inline-flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 cursor-pointer font-sans"
+          className="relative inline-flex items-center px-2 py-2 sm:px-3 sm:py-2 text-xs sm:text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 cursor-pointer font-sans flex-shrink-0 min-w-0"
+          aria-label="Go to previous page"
         >
-          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Previous
+          <span className="hidden xs:inline">Previous</span>
         </button>
 
         {/* Page numbers */}
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 flex-shrink-0 overflow-hidden">
           {getPageNumbers().map((page, index) => (
             <button
               key={index}
               onClick={() => typeof page === 'number' && onPageChange(page)}
               disabled={page === '...'}
-              className={`relative inline-flex items-center px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 font-sans ${
+              className={`relative inline-flex items-center px-2 py-2 sm:px-3 sm:py-2 text-xs sm:text-sm font-medium rounded-md transition-all duration-200 font-sans flex-shrink-0 min-w-0 ${
                 page === currentPage
                   ? 'z-10 bg-blue-600 text-white shadow-md cursor-default'
                   : page === '...'
                   ? 'text-gray-400 cursor-default'
                   : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-700 hover:border-gray-400 cursor-pointer'
               }`}
+              aria-label={page === '...' ? 'More pages' : `Go to page ${page}`}
+              aria-current={page === currentPage ? 'page' : undefined}
             >
               {page}
             </button>
@@ -106,10 +109,11 @@ export default function Pagination({
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="relative inline-flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 cursor-pointer font-sans"
+          className="relative inline-flex items-center px-2 py-2 sm:px-3 sm:py-2 text-xs sm:text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 cursor-pointer font-sans flex-shrink-0 min-w-0"
+          aria-label="Go to next page"
         >
-          Next
-          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span className="hidden xs:inline">Next</span>
+          <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>

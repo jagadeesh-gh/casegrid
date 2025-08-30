@@ -108,7 +108,7 @@ export default function ActsList() {
           <ActsGrid acts={currentActs} />
           {filteredActs.length > 0 && (
             <div className="bg-white rounded-lg shadow p-6">
-              <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+              <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 lg:gap-6">
                 <PageSizeSelector
                   currentSize={itemsPerPage}
                   onSizeChange={handlePageSizeChange}
@@ -120,6 +120,7 @@ export default function ActsList() {
                     totalItems={filteredActs.length}
                     itemsPerPage={itemsPerPage}
                     onPageChange={handlePageChange}
+                    className="w-full lg:w-auto"
                   />
                 )}
               </div>

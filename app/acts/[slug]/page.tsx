@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { SEED_ACTS } from '@/lib/seed-data';
 import DownloadButton from '@/components/DownloadButton';
-import { formatFileSize } from '@/lib/utils';
+import { formatFileSize, formatDate } from '@/lib/utils';
 
 interface ActDetailPageProps {
   params: {
@@ -159,7 +159,7 @@ export default function ActDetailPage({ params }: ActDetailPageProps) {
                     <div>
                       <dt className="text-sm font-medium text-gray-700">Added</dt>
                       <dd className="text-sm text-gray-900">
-                        {new Date(act.createdAt).toLocaleDateString()}
+                        {formatDate(act.createdAt)}
                       </dd>
                     </div>
                   )}

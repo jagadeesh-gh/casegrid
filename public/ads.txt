@@ -1,0 +1,18 @@
+# ads.txt file for CaseGrid
+# This file lists authorized digital sellers for advertising inventory
+# Format: <domain>, <publisher ID>, <relationship>, <certification authority ID>
+
+# Example entries (replace with your actual advertising partners):
+google.com, pub-1975571206726620, DIRECT, f08c47fec0942fa0
+# facebook.com, 123456789, DIRECT, 9a68e8b8b8b8b8b8
+
+# Note: This is a placeholder ads.txt file
+# You should:
+# 1. Replace the example entries with your actual advertising partners
+# 2. Get the correct publisher IDs from your ad networks
+# 3. Verify the relationship type (DIRECT, RESELLER)
+# 4. Include certification authority IDs if applicable
+
+# For more information, visit: https://iabtechlab.com/ads-txt/
+
+

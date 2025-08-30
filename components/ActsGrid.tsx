@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Act } from '@/lib/types';
 import DownloadButton from './DownloadButton';
+import { formatDate } from '@/lib/utils';
 
 interface ActsGridProps {
   acts: Act[];
@@ -71,11 +72,11 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
               
               <footer className="flex items-center justify-between mt-4">
                 <DownloadButton act={act} variant="primary" />
-                {act.updatedAt && (
-                  <span className="text-xs text-gray-500 font-sans">
-                    Last updated: <time dateTime={act.updatedAt}>{new Date(act.updatedAt).toLocaleDateString()}</time>
-                  </span>
-                )}
+                                 {act.updatedAt && (
+                   <span className="hidden sm:block text-xs text-gray-500 font-sans">
+                     Last updated: <time dateTime={act.updatedAt}>{formatDate(act.updatedAt)}</time>
+                   </span>
+                 )}
               </footer>
             </article>
           ))}
@@ -91,7 +92,7 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">State</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Year</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Category</th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Ammended On</th>
+              <th scope="col" className="hidden lg:table-cell px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Ammended On</th>
               <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Actions</th>
             </tr>
           </thead>
@@ -120,9 +121,9 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
                     </span>
                   )}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-sans">
+                <td className="hidden lg:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-sans">
                   {act.updatedAt ? (
-                    <time dateTime={act.updatedAt}>{new Date(act.updatedAt).toLocaleDateString()}</time>
+                    <time dateTime={act.updatedAt}>{formatDate(act.updatedAt)}</time>
                   ) : (
                     '-'
                   )}

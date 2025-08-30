@@ -73,7 +73,7 @@ export default function DownloadButton({ act, variant = 'primary', className = '
       </button>
       
       {act.sizeBytes && (
-        <p className="text-xs text-gray-500 mt-1">
+        <p className="hidden sm:block text-xs text-gray-500 mt-1">
           {formatFileSize(act.sizeBytes)}
         </p>
       )}
