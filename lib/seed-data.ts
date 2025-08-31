@@ -13,8 +13,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 245760,
     summary: 'An Act to provide free and compulsory education to all children of the age of six to fourteen years.',
     source: 'Ministry of Education, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '2',
@@ -27,8 +27,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 312320,
     summary: 'An Act to regulate the employment of contract labour in certain establishments.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '3',
@@ -41,8 +41,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 156672,
     summary: 'An Act to provide for fixing minimum rates of wages in certain employments.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '4',
@@ -55,8 +55,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 278528,
     summary: 'An Act to consolidate and amend the law regulating labour in factories.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '5',
@@ -69,8 +69,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 198656,
     summary: 'An Act to provide for the institution of provident funds for employees.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '6',
@@ -83,8 +83,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 289792,
     summary: 'An Act to make provision for the investigation and settlement of industrial disputes.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '7',
@@ -97,8 +97,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 145408,
     summary: 'An Act to regulate the employment of women in certain establishments for certain periods.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '8',
@@ -111,8 +111,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 123904,
     summary: 'An Act to provide for the payment of equal remuneration to men and women workers.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Central Rules
   {
@@ -126,8 +126,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 189440,
     summary: 'Rules regulating the conduct of government servants in the Central Civil Services.',
     source: 'Department of Personnel and Training, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '10',
@@ -140,8 +140,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 234496,
     summary: 'Rules governing the pension and retirement benefits for central government employees.',
     source: 'Department of Pension and Pensioners Welfare, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '11',
@@ -154,8 +154,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 167936,
     summary: 'Rules regulating leave entitlements and conditions for central government employees.',
     source: 'Department of Personnel and Training, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Maharashtra Acts
   {
@@ -169,8 +169,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 189440,
     summary: 'An Act to provide for the constitution of a fund for financing activities to promote welfare of labour.',
     source: 'Labour Department, Government of Maharashtra',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '13',
@@ -183,8 +183,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 298752,
     summary: 'An Act to regulate the employment and conditions of service of workers in shops and establishments.',
     source: 'Labour Department, Government of Maharashtra',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '14',
@@ -197,8 +197,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 178176,
     summary: 'An Act to provide for the constitution of a welfare board for domestic workers in Maharashtra.',
     source: 'Labour Department, Government of Maharashtra',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Maharashtra Rules
   {
@@ -212,8 +212,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 145408,
     summary: 'Rules for the administration and management of the Maharashtra Labour Welfare Fund.',
     source: 'Labour Department, Government of Maharashtra',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // West Bengal Acts
   {
@@ -227,8 +227,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 134144,
     summary: 'An Act to regulate the payment of wages to certain classes of employed persons.',
     source: 'Labour Department, Government of West Bengal',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '17',
@@ -241,8 +241,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 223232,
     summary: 'An Act to provide for the regulation of conditions of work and employment in shops and establishments.',
     source: 'Labour Department, Government of West Bengal',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // West Bengal Rules
   {
@@ -256,8 +256,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 156672,
     summary: 'Rules for the implementation of the West Bengal Shops and Establishments Act, 1963.',
     source: 'Labour Department, Government of West Bengal',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Rajasthan Acts
   {
@@ -271,8 +271,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 167936,
     summary: 'An Act to provide for the payment by certain classes of employers to their workmen.',
     source: 'Labour Department, Government of Rajasthan',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '20',
@@ -285,8 +285,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 189440,
     summary: 'An Act to provide for the constitution of a fund for financing activities to promote welfare of labour.',
     source: 'Labour Department, Government of Rajasthan',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Rajasthan Rules
   {
@@ -300,8 +300,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 134144,
     summary: 'Rules for the administration and management of the Rajasthan Labour Welfare Fund.',
     source: 'Labour Department, Government of Rajasthan',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Madhya Pradesh Acts
   {
@@ -315,8 +315,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 178176,
     summary: 'An Act to provide for the payment of bonus to persons employed in certain establishments.',
     source: 'Labour Department, Government of Madhya Pradesh',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '23',
@@ -329,8 +329,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 245760,
     summary: 'An Act to provide for the regulation of conditions of work and employment in shops and establishments.',
     source: 'Labour Department, Government of Madhya Pradesh',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Madhya Pradesh Rules
   {
@@ -344,8 +344,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 167936,
     summary: 'Rules for the implementation of the Madhya Pradesh Shops and Establishments Act, 1958.',
     source: 'Labour Department, Government of Madhya Pradesh',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Karnataka Acts
   {
@@ -359,8 +359,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 234496,
     summary: 'An Act to provide for the regulation of conditions of work and employment in shops and commercial establishments.',
     source: 'Labour Department, Government of Karnataka',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Karnataka Rules
   {
@@ -374,8 +374,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 178176,
     summary: 'Rules for the implementation of the Karnataka Shops and Commercial Establishments Act, 1961.',
     source: 'Labour Department, Government of Karnataka',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Tamil Nadu Acts
   {
@@ -389,8 +389,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 256000,
     summary: 'An Act to provide for the regulation of conditions of work and employment in shops and establishments.',
     source: 'Labour Department, Government of Tamil Nadu',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Tamil Nadu Rules
   {
@@ -404,8 +404,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 189440,
     summary: 'Rules for the implementation of the Tamil Nadu Shops and Establishments Act, 1947.',
     source: 'Labour Department, Government of Tamil Nadu',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Central Acts
   {
@@ -419,8 +419,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 198656,
     summary: 'An Act to prohibit the engagement of children in certain employments and to regulate the conditions of work of children.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '30',
@@ -433,8 +433,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 167936,
     summary: 'An Act to provide for a scheme for the payment of gratuity to employees engaged in factories, mines, oilfields, plantations, ports, railway companies, shops or other establishments.',
     source: 'Ministry of Labour and Employment, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Central Rules
   {
@@ -448,8 +448,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 223232,
     summary: 'Rules governing the recruitment and appointment to various posts in the Central Civil Services.',
     source: 'Department of Personnel and Training, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '32',
@@ -462,8 +462,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 256000,
     summary: 'Rules for classification, control and appeal procedures in the Central Civil Services.',
     source: 'Department of Personnel and Training, Government of India',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Maharashtra Acts
   {
@@ -477,8 +477,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 312320,
     summary: 'An Act to provide for the recognition of trade unions and prevention of unfair labour practices in Maharashtra.',
     source: 'Labour Department, Government of Maharashtra',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '34',
@@ -491,8 +491,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 298752,
     summary: 'An Act to regulate industrial relations and to provide for the prevention and settlement of industrial disputes in Maharashtra.',
     source: 'Labour Department, Government of Maharashtra',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Maharashtra Rules
   {
@@ -506,8 +506,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 234496,
     summary: 'Rules for the implementation of the Maharashtra Industrial Relations Act, 1946.',
     source: 'Labour Department, Government of Maharashtra',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '36',
@@ -520,8 +520,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 256000,
     summary: 'Rules for the implementation of the Maharashtra Shops and Establishments Act, 2017.',
     source: 'Labour Department, Government of Maharashtra',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional West Bengal Acts
   {
@@ -535,8 +535,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 245760,
     summary: 'An Act to provide for the investigation and settlement of industrial disputes in West Bengal.',
     source: 'Labour Department, Government of West Bengal',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '38',
@@ -549,8 +549,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 198656,
     summary: 'An Act to provide for the constitution of a fund for financing activities to promote welfare of labour in West Bengal.',
     source: 'Labour Department, Government of West Bengal',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional West Bengal Rules
   {
@@ -564,8 +564,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 167936,
     summary: 'Rules for the administration and management of the West Bengal Labour Welfare Fund.',
     source: 'Labour Department, Government of West Bengal',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '40',
@@ -578,8 +578,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 212992,
     summary: 'Rules for the implementation of the West Bengal Industrial Disputes Act, 1947.',
     source: 'Labour Department, Government of West Bengal',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Rajasthan Acts
   {
@@ -593,8 +593,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 245760,
     summary: 'An Act to provide for the investigation and settlement of industrial disputes in Rajasthan.',
     source: 'Labour Department, Government of Rajasthan',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '42',
@@ -607,8 +607,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 234496,
     summary: 'An Act to provide for the regulation of conditions of work and employment in shops and commercial establishments in Rajasthan.',
     source: 'Labour Department, Government of Rajasthan',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Rajasthan Rules
   {
@@ -622,8 +622,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 212992,
     summary: 'Rules for the implementation of the Rajasthan Industrial Disputes Act, 1947.',
     source: 'Labour Department, Government of Rajasthan',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '44',
@@ -636,8 +636,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 189440,
     summary: 'Rules for the implementation of the Rajasthan Shops and Commercial Establishments Act, 1958.',
     source: 'Labour Department, Government of Rajasthan',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Madhya Pradesh Acts
   {
@@ -651,8 +651,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 245760,
     summary: 'An Act to provide for the investigation and settlement of industrial disputes in Madhya Pradesh.',
     source: 'Labour Department, Government of Madhya Pradesh',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '46',
@@ -665,8 +665,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 198656,
     summary: 'An Act to provide for the constitution of a fund for financing activities to promote welfare of labour in Madhya Pradesh.',
     source: 'Labour Department, Government of Madhya Pradesh',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Madhya Pradesh Rules
   {
@@ -680,8 +680,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 212992,
     summary: 'Rules for the implementation of the Madhya Pradesh Industrial Disputes Act, 1947.',
     source: 'Labour Department, Government of Madhya Pradesh',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '48',
@@ -694,8 +694,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 167936,
     summary: 'Rules for the administration and management of the Madhya Pradesh Labour Welfare Fund.',
     source: 'Labour Department, Government of Madhya Pradesh',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Karnataka Acts
   {
@@ -709,8 +709,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 245760,
     summary: 'An Act to provide for the investigation and settlement of industrial disputes in Karnataka.',
     source: 'Labour Department, Government of Karnataka',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '50',
@@ -723,8 +723,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 198656,
     summary: 'An Act to provide for the constitution of a fund for financing activities to promote welfare of labour in Karnataka.',
     source: 'Labour Department, Government of Karnataka',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Karnataka Rules
   {
@@ -738,8 +738,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 212992,
     summary: 'Rules for the implementation of the Karnataka Industrial Disputes Act, 1947.',
     source: 'Labour Department, Government of Karnataka',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '52',
@@ -752,8 +752,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 167936,
     summary: 'Rules for the administration and management of the Karnataka Labour Welfare Fund.',
     source: 'Labour Department, Government of Karnataka',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Tamil Nadu Acts
   {
@@ -767,8 +767,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 245760,
     summary: 'An Act to provide for the investigation and settlement of industrial disputes in Tamil Nadu.',
     source: 'Labour Department, Government of Tamil Nadu',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '54',
@@ -781,8 +781,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 198656,
     summary: 'An Act to provide for the constitution of a fund for financing activities to promote welfare of labour in Tamil Nadu.',
     source: 'Labour Department, Government of Tamil Nadu',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   // Additional Tamil Nadu Rules
   {
@@ -796,8 +796,8 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 212992,
     summary: 'Rules for the implementation of the Tamil Nadu Industrial Disputes Act, 1947.',
     source: 'Labour Department, Government of Tamil Nadu',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   },
   {
     id: '56',
@@ -810,7 +810,7 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 167936,
     summary: 'Rules for the administration and management of the Tamil Nadu Labour Welfare Fund.',
     source: 'Labour Department, Government of Tamil Nadu',
-    createdAt: '2024-01-01',
-    updatedAt: '2024-01-01'
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
   }
 ];

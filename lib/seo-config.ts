@@ -192,7 +192,7 @@ export const structuredData = {
     "url": BASE_URL,
     "logo": `${BASE_URL}/logo.png`,
     "description": "Professional platform for Indian legal acts and rules",
-    "foundingDate": "2024",
+            "foundingDate": "2025",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IN"

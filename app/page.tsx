@@ -5,6 +5,7 @@ import { useState } from 'react';
 import SearchBar from '@/components/SearchBar';
 import StateFilter from '@/components/StateFilter';
 import StateCoverageModal from '@/components/StateCoverageModal';
+import LaunchCountdown from '@/components/LaunchCountdown';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -88,6 +89,13 @@ export default function Home() {
               </svg>
               Browse All Acts
             </Link>
+          </div>
+        </section>
+
+        {/* Launch Countdown Banner */}
+        <section className="mb-20" aria-labelledby="launch-heading">
+          <div className="max-w-4xl mx-auto">
+            <LaunchCountdown />
           </div>
         </section>
 
@@ -239,7 +247,7 @@ export default function Home() {
               <Link href="/contact" className="hover:text-blue-600 transition-colors duration-200">Contact</Link>
             </div>
             <p className="mt-6 text-xs text-gray-400 font-sans">
-              © 2024 CaseGrid. All rights reserved. | Indian Legal Acts & Rules Database
+              © 2025 CaseGrid. All rights reserved. | Indian Legal Acts & Rules Database
             </p>
           </div>
         </div>

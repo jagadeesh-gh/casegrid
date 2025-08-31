@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic act pages
   const actPages = SEED_ACTS.map((act) => ({
     url: `${baseUrl}/acts/${act.slug}`,
-    lastModified: new Date(act.updatedAt || act.createdAt || '2024-01-01'),
+            lastModified: new Date(act.updatedAt || act.createdAt || '2025-01-01'),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))

@@ -4,23 +4,23 @@ import ActCard from '../ActCard'
 const mockAct = {
   id: '1',
   slug: 'test-act',
-  title: 'Test Act, 2024',
+  title: 'Test Act, 2025',
   state: 'Test State',
-  year: 2024,
+  year: 2025,
   category: 'Act' as const,
   pdfUrl: 'https://example.com/test.pdf',
   sizeBytes: 1024000,
   summary: 'This is a test act for testing purposes.',
   source: 'Test Department',
-  createdAt: '2024-01-01',
-  updatedAt: '2024-01-01'
+      createdAt: '2025-01-01',
+    updatedAt: '2025-01-01'
 }
 
 describe('ActCard', () => {
   it('renders act title as a link', () => {
     render(<ActCard act={mockAct} />)
     
-    const titleLink = screen.getByText('Test Act, 2024')
+    const titleLink = screen.getByText('Test Act, 2025')
     expect(titleLink).toBeInTheDocument()
     expect(titleLink.closest('a')).toHaveAttribute('href', '/acts/test-act')
   })
@@ -35,7 +35,7 @@ describe('ActCard', () => {
   it('renders year', () => {
     render(<ActCard act={mockAct} />)
     
-    const year = screen.getByText('2024')
+    const year = screen.getByText('2025')
     expect(year).toBeInTheDocument()
   })
 
