@@ -82,111 +82,57 @@ export default function ActDetailPage({ params }: ActDetailPageProps) {
           </ol>
         </nav>
 
-        {/* Act Details */}
+        {/* Act Details - Minimal Version */}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="p-8">
-            {/* Header */}
-            <div className="mb-8">
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">{act.title}</h1>
+          <div className="p-6">
+            {/* Header with essential info only */}
+            <div className="mb-6">
+              <h1 className="text-2xl font-bold text-gray-900 mb-3">{act.title}</h1>
               
-              <div className="flex flex-wrap gap-3 mb-4">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {act.state && (
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
                     {act.state}
                   </span>
                 )}
                 {act.year && (
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
                     {act.year}
                   </span>
                 )}
                 {act.category && (
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                     {act.category}
+                  </span>
+                )}
+                {act.status && (
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                    act.status === 'Active' ? 'bg-green-100 text-green-800' :
+                    act.status === 'Repealed' ? 'bg-red-100 text-red-800' :
+                    act.status === 'Spent' ? 'bg-yellow-100 text-yellow-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {act.status}
                   </span>
                 )}
               </div>
 
               {act.summary && (
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   {act.summary}
                 </p>
               )}
             </div>
 
-            {/* Metadata */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 p-6 bg-gray-50 rounded-lg">
-              <div>
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
-                  Document Information
-                </h3>
-                <dl className="space-y-2">
-                  {act.state && (
-                    <div>
-                      <dt className="text-sm font-medium text-gray-700">State</dt>
-                      <dd className="text-sm text-gray-900">{act.state}</dd>
-                    </div>
-                  )}
-                  {act.year && (
-                    <div>
-                      <dt className="text-sm font-medium text-gray-700">Year</dt>
-                      <dd className="text-sm text-gray-900">{act.year}</dd>
-                    </div>
-                  )}
-                  {act.category && (
-                    <div>
-                      <dt className="text-sm font-medium text-gray-700">Category</dt>
-                      <dd className="text-sm text-gray-900">{act.category}</dd>
-                    </div>
-                  )}
-                </dl>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
-                  File Details
-                </h3>
-                <dl className="space-y-2">
-                  {act.sizeBytes && (
-                    <div>
-                      <dt className="text-sm font-medium text-gray-700">File Size</dt>
-                      <dd className="text-sm text-gray-900">{formatFileSize(act.sizeBytes)}</dd>
-                    </div>
-                  )}
+            {/* Simple Download Section */}
+            <div className="border-t border-gray-200 pt-6">
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-600">
                   {act.source && (
-                    <div>
-                      <dt className="text-sm font-medium text-gray-700">Source</dt>
-                      <dd className="text-sm text-gray-900">{act.source}</dd>
-                    </div>
+                    <span>Source: {act.source}</span>
                   )}
-                  {act.createdAt && (
-                    <div>
-                      <dt className="text-sm font-medium text-gray-700">Added</dt>
-                      <dd className="text-sm text-gray-900">
-                        {formatDate(act.createdAt)}
-                      </dd>
-                    </div>
-                  )}
-                </dl>
-              </div>
-            </div>
-
-            {/* Download Section */}
-            <div className="border-t border-gray-200 pt-8">
-              <div className="text-center">
-                <h3 className="text-lg font-medium text-gray-900 mb-4">
-                  Download Official Document
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Click below to download the official PDF document for {act.title}.
-                </p>
-                
-                <DownloadButton act={act} variant="primary" className="inline-block" />
-                
-                <p className="text-xs text-gray-500 mt-4">
-                  This document is provided for informational purposes only. 
-                  Please refer to the official source for the most current version.
-                </p>
+                </div>
+                <DownloadButton act={act} variant="primary" />
               </div>
             </div>
           </div>
