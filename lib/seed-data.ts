@@ -1,4 +1,4 @@
-import { Act } from './types';
+import { Act, Notification } from './types';
 
 export const SEED_ACTS: Act[] = [
   // Central Acts
@@ -9,6 +9,7 @@ export const SEED_ACTS: Act[] = [
     state: 'Central',
     year: 2009,
     category: 'Act',
+    status: 'Active',
     pdfUrl: 'https://example.com/pdfs/right-to-education-act-2009.pdf',
     sizeBytes: 245760,
     summary: 'An Act to provide free and compulsory education to all children of the age of six to fourteen years.',
@@ -23,6 +24,7 @@ export const SEED_ACTS: Act[] = [
     state: 'Central',
     year: 1970,
     category: 'Act',
+    status: 'Active',
     pdfUrl: 'https://example.com/pdfs/contract-labour-act-1970.pdf',
     sizeBytes: 312320,
     summary: 'An Act to regulate the employment of contract labour in certain establishments.',
@@ -37,6 +39,7 @@ export const SEED_ACTS: Act[] = [
     state: 'Central',
     year: 1948,
     category: 'Act',
+    status: 'Active',
     pdfUrl: 'https://example.com/pdfs/minimum-wages-act-1948.pdf',
     sizeBytes: 156672,
     summary: 'An Act to provide for fixing minimum rates of wages in certain employments.',
@@ -51,6 +54,7 @@ export const SEED_ACTS: Act[] = [
     state: 'Central',
     year: 1948,
     category: 'Act',
+    status: 'Active',
     pdfUrl: 'https://example.com/pdfs/factories-act-1948.pdf',
     sizeBytes: 278528,
     summary: 'An Act to consolidate and amend the law regulating labour in factories.',
@@ -79,6 +83,7 @@ export const SEED_ACTS: Act[] = [
     state: 'Central',
     year: 1947,
     category: 'Act',
+    status: 'Repealed',
     pdfUrl: 'https://example.com/pdfs/industrial-disputes-act-1947.pdf',
     sizeBytes: 289792,
     summary: 'An Act to make provision for the investigation and settlement of industrial disputes.',
@@ -122,10 +127,34 @@ export const SEED_ACTS: Act[] = [
     state: 'Central',
     year: 1964,
     category: 'Rule',
+    status: 'Active',
     pdfUrl: 'https://example.com/pdfs/central-civil-services-rules-1964.pdf',
     sizeBytes: 189440,
     summary: 'Rules regulating the conduct of government servants in the Central Civil Services.',
     source: 'Department of Personnel and Training, Government of India',
+    forms: [
+      {
+        id: 'f1',
+        title: 'FORM D',
+        description: 'Annual declaration form for government servants to declare their assets and liabilities',
+        fileUrl: 'https://example.com/forms/central-civil-services/FORM-D.xlsx',
+        sizeBytes: 45120
+      },
+      {
+        id: 'f2',
+        title: 'FORM F',
+        description: 'Application form for seeking permission to engage in private employment',
+        fileUrl: 'https://example.com/forms/central-civil-services/FORM-F.xlsx',
+        sizeBytes: 32768
+      },
+      {
+        id: 'f3',
+        title: 'FORM V',
+        description: 'Form for obtaining vigilance clearance for promotions and transfers',
+        fileUrl: 'https://example.com/forms/central-civil-services/FORM-V.xlsx',
+        sizeBytes: 38912
+      }
+    ],
     createdAt: '2025-01-01',
     updatedAt: '2025-01-01'
   },
@@ -165,6 +194,7 @@ export const SEED_ACTS: Act[] = [
     state: 'Maharashtra',
     year: 1965,
     category: 'Act',
+    status: 'Spent',
     pdfUrl: 'https://example.com/pdfs/labour-welfare-fund-act-1965.pdf',
     sizeBytes: 189440,
     summary: 'An Act to provide for the constitution of a fund for financing activities to promote welfare of labour.',
@@ -223,6 +253,7 @@ export const SEED_ACTS: Act[] = [
     state: 'West Bengal',
     year: 1936,
     category: 'Act',
+    status: 'Repealed',
     pdfUrl: 'https://example.com/pdfs/payment-of-wages-act-1936.pdf',
     sizeBytes: 134144,
     summary: 'An Act to regulate the payment of wages to certain classes of employed persons.',
@@ -256,6 +287,22 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 156672,
     summary: 'Rules for the implementation of the West Bengal Shops and Establishments Act, 1963.',
     source: 'Labour Department, Government of West Bengal',
+    forms: [
+      {
+        id: 'f7',
+        title: 'FORM I',
+        description: 'Form for registering shops and commercial establishments in West Bengal',
+        fileUrl: 'https://example.com/forms/west-bengal-shops/FORM-I.xlsx',
+        sizeBytes: 42496
+      },
+      {
+        id: 'f8',
+        title: 'FORM II',
+        description: 'Application for modifying standard working hours for establishments',
+        fileUrl: 'https://example.com/forms/west-bengal-shops/FORM-II.xlsx',
+        sizeBytes: 30720
+      }
+    ],
     createdAt: '2025-01-01',
     updatedAt: '2025-01-01'
   },
@@ -520,6 +567,29 @@ export const SEED_ACTS: Act[] = [
     sizeBytes: 256000,
     summary: 'Rules for the implementation of the Maharashtra Shops and Establishments Act, 2017.',
     source: 'Labour Department, Government of Maharashtra',
+    forms: [
+      {
+        id: 'f4',
+        title: 'FORM A',
+        description: 'Application form for registering a new shop or commercial establishment',
+        fileUrl: 'https://example.com/forms/maharashtra-shops/FORM-A.xlsx',
+        sizeBytes: 28672
+      },
+      {
+        id: 'f5',
+        title: 'FORM B',
+        description: 'Form for renewing existing shop and establishment license',
+        fileUrl: 'https://example.com/forms/maharashtra-shops/FORM-B.xlsx',
+        sizeBytes: 25600
+      },
+      {
+        id: 'f6',
+        title: 'FORM C',
+        description: 'Form for declaring employee details and working conditions',
+        fileUrl: 'https://example.com/forms/maharashtra-shops/FORM-C.xlsx',
+        sizeBytes: 35840
+      }
+    ],
     createdAt: '2025-01-01',
     updatedAt: '2025-01-01'
   },
@@ -812,5 +882,138 @@ export const SEED_ACTS: Act[] = [
     source: 'Labour Department, Government of Tamil Nadu',
     createdAt: '2025-01-01',
     updatedAt: '2025-01-01'
+  }
+];
+
+export const SEED_NOTIFICATIONS: Notification[] = [
+  // Notifications for Right to Education Act, 2009
+  {
+    id: 'n1',
+    actId: '1',
+    title: 'Amendment to RTE Act - Free Uniform Provision',
+    type: 'amendment',
+    date: '2024-12-15',
+    source: 'Ministry of Education, Government of India',
+    pdfUrl: 'https://example.com/pdfs/notifications/rte-uniform-amendment-2024.pdf'
+  },
+  {
+    id: 'n2',
+    actId: '1',
+    title: 'Implementation Update - Digital Learning Resources',
+    type: 'implementation',
+    date: '2024-11-20',
+    source: 'Ministry of Education, Government of India',
+    pdfUrl: 'https://example.com/pdfs/notifications/rte-digital-learning-2024.pdf'
+  },
+  {
+    id: 'n3',
+    actId: '1',
+    title: 'Clarification on Age Verification Process',
+    type: 'clarification',
+    date: '2024-10-05',
+    source: 'Central Board of Secondary Education'
+  },
+
+  // Notifications for Contract Labour Act, 1970
+  {
+    id: 'n4',
+    actId: '2',
+    title: 'Enhanced Penalties for Non-Compliance',
+    type: 'enforcement',
+    date: '2024-12-01',
+    source: 'Ministry of Labour and Employment, Government of India',
+    pdfUrl: 'https://example.com/pdfs/notifications/contract-labour-penalties-2024.pdf'
+  },
+  {
+    id: 'n5',
+    actId: '2',
+    title: 'Digital Registration System Launch',
+    type: 'update',
+    date: '2024-11-10',
+    source: 'Ministry of Labour and Employment, Government of India'
+  },
+
+  // Notifications for Minimum Wages Act, 1948
+  {
+    id: 'n6',
+    actId: '3',
+    title: 'Revised Minimum Wage Rates 2024',
+    type: 'update',
+    date: '2024-01-01',
+    source: 'Ministry of Labour and Employment, Government of India',
+    pdfUrl: 'https://example.com/pdfs/notifications/minimum-wage-rates-2024.pdf'
+  },
+  {
+    id: 'n7',
+    actId: '3',
+    title: 'Quarterly Review Process Implementation',
+    type: 'implementation',
+    date: '2024-09-15',
+    source: 'Central Advisory Board on Minimum Wages'
+  },
+
+  // Notifications for Factories Act, 1948
+  {
+    id: 'n8',
+    actId: '4',
+    title: 'Safety Protocol Updates - Chemical Industries',
+    type: 'amendment',
+    date: '2024-11-25',
+    source: 'Directorate General of Factory Advice Service',
+    pdfUrl: 'https://example.com/pdfs/notifications/factory-safety-protocols-2024.pdf'
+  },
+  {
+    id: 'n9',
+    actId: '4',
+    title: 'Digital Inspection System Rollout',
+    type: 'implementation',
+    date: '2024-10-20',
+    source: 'Ministry of Labour and Employment, Government of India'
+  },
+
+  // Notifications for Maharashtra Shops and Establishments Act, 2017
+  {
+    id: 'n10',
+    actId: '13',
+    title: 'Extended Working Hours During Festival Season',
+    type: 'clarification',
+    date: '2024-12-10',
+    source: 'Labour Department, Government of Maharashtra'
+  },
+  {
+    id: 'n11',
+    actId: '13',
+    title: 'Online Registration Portal Enhancement',
+    type: 'update',
+    date: '2024-11-05',
+    source: 'Labour Department, Government of Maharashtra'
+  },
+
+  // Notifications for West Bengal Shops and Establishments Act, 1963
+  {
+    id: 'n12',
+    actId: '17',
+    title: 'Compliance Audit Guidelines',
+    type: 'enforcement',
+    date: '2024-12-08',
+    source: 'Labour Department, Government of West Bengal'
+  },
+
+  // Notifications for Central Civil Services Rules, 1964
+  {
+    id: 'n13',
+    actId: '9',
+    title: 'Updated Code of Conduct for Social Media',
+    type: 'amendment',
+    date: '2024-11-30',
+    source: 'Department of Personnel and Training, Government of India'
+  },
+  {
+    id: 'n14',
+    actId: '9',
+    title: 'Anti-Corruption Training Mandatory',
+    type: 'implementation',
+    date: '2024-10-15',
+    source: 'Central Vigilance Commission'
   }
 ];

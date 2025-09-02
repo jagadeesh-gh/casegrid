@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { SEED_ACTS } from '@/lib/seed-data';
+import { SEED_ACTS, SEED_NOTIFICATIONS } from '@/lib/seed-data';
 import DownloadButton from '@/components/DownloadButton';
+import ActDetailsTabbed from '@/components/ActDetailsTabbed';
 import { formatFileSize, formatDate } from '@/lib/utils';
 
 interface ActDetailPageProps {
@@ -31,6 +32,9 @@ export default function ActDetailPage({ params }: ActDetailPageProps) {
   if (!act) {
     notFound();
   }
+
+  // Get notifications for this act
+  const notifications = SEED_NOTIFICATIONS.filter(n => n.actId === act.id);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -186,6 +190,11 @@ export default function ActDetailPage({ params }: ActDetailPageProps) {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Notifications and Forms Section */}
+        <div className="mt-8">
+          <ActDetailsTabbed act={act} notifications={notifications} />
         </div>
 
         {/* Back to Acts */}

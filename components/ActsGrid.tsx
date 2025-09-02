@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Act } from '@/lib/types';
-import DownloadButton from './DownloadButton';
 import { formatDate } from '@/lib/utils';
 
 interface ActsGridProps {
@@ -67,17 +66,26 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
                       {act.category}
                     </span>
                   )}
+                  {act.status && (
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                      act.status === 'Active' ? 'bg-green-100 text-green-800' :
+                      act.status === 'Repealed' ? 'bg-red-100 text-red-800' :
+                      act.status === 'Spent' ? 'bg-yellow-100 text-yellow-800' :
+                      'bg-gray-100 text-gray-800'
+                    }`}>
+                      {act.status}
+                    </span>
+                  )}
                 </div>
               </header>
               
-              <footer className="flex items-center justify-between mt-4">
-                <DownloadButton act={act} variant="primary" />
-                                 {act.updatedAt && (
-                   <span className="hidden sm:block text-xs text-gray-500 font-sans">
-                     Last updated: <time dateTime={act.updatedAt}>{formatDate(act.updatedAt)}</time>
-                   </span>
-                 )}
-              </footer>
+              {act.updatedAt && (
+                <footer className="mt-4">
+                  <span className="text-xs text-gray-500 font-sans">
+                    Last updated: <time dateTime={act.updatedAt}>{formatDate(act.updatedAt)}</time>
+                  </span>
+                </footer>
+              )}
             </article>
           ))}
         </div>
@@ -88,12 +96,12 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
         <table className="min-w-full divide-y divide-gray-200" role="table" aria-label="Acts and Rules Table">
           <thead className="bg-gray-50">
             <tr>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display w-1/3">Title</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display w-1/4">Title</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">State</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Year</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Category</th>
-              <th scope="col" className="hidden lg:table-cell px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Ammended On</th>
-              <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Actions</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Status</th>
+              <th scope="col" className="hidden lg:table-cell px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Source</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
@@ -121,15 +129,22 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
                     </span>
                   )}
                 </td>
-                <td className="hidden lg:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-sans">
-                  {act.updatedAt ? (
-                    <time dateTime={act.updatedAt}>{formatDate(act.updatedAt)}</time>
-                  ) : (
-                    '-'
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {act.status && (
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                      act.status === 'Active' ? 'bg-green-100 text-green-800' :
+                      act.status === 'Repealed' ? 'bg-red-100 text-red-800' :
+                      act.status === 'Spent' ? 'bg-yellow-100 text-yellow-800' :
+                      'bg-gray-100 text-gray-800'
+                    }`}>
+                      {act.status}
+                    </span>
                   )}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                  <DownloadButton act={act} variant="secondary" />
+                <td className="hidden lg:table-cell px-6 py-4 text-sm text-gray-900 font-sans">
+                  <div className="max-w-xs">
+                    {act.source || '-'}
+                  </div>
                 </td>
               </tr>
             ))}
