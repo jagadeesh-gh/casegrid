@@ -10,11 +10,11 @@ interface StateCoverageModalProps {
 
 // States currently available in the system
 const AVAILABLE_STATES = [
+  'Central',
 ];
 
 // States that are coming soon (subset of all Indian states)
 const COMING_SOON_STATES = [
-  'Central',
   'Andhra Pradesh',
   'Arunachal Pradesh',
   'Assam',
