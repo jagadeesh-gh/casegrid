@@ -56,7 +56,7 @@ export default function Home() {
           
           <h1 id="hero-heading" className="text-5xl font-extrabold text-gray-900 sm:text-6xl md:text-7xl mb-8 leading-tight font-display">
             Your Gateway to
-            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient-x">
+            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient-x pb-2">
               Indian Legal Documents
             </span>
           </h1>
@@ -110,21 +110,21 @@ export default function Home() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <div className="bg-green-100 border border-green-200 rounded-lg p-3 text-center">
-                  <div className="text-lg font-bold text-green-700 font-display">7</div>
+                  <div className="text-lg font-bold text-green-700 font-display">0</div>
                   <div className="text-sm text-green-600 font-sans">States Available</div>
                 </div>
                 <div className="bg-orange-100 border border-orange-200 rounded-lg p-3 text-center">
-                  <div className="text-lg font-bold text-orange-700 font-display">29</div>
+                  <div className="text-lg font-bold text-orange-700 font-display">36</div>
                   <div className="text-sm text-orange-600 font-sans">Coming Soon</div>
                 </div>
                 <div className="bg-blue-100 border border-blue-200 rounded-lg p-3 text-center">
-                  <div className="text-lg font-bold text-blue-700 font-display">19%</div>
+                  <div className="text-lg font-bold text-blue-700 font-display">0%</div>
                   <div className="text-sm text-blue-600 font-sans">Coverage</div>
                 </div>
               </div>
               
               <p className="text-blue-800 font-sans">
-                <strong>Currently available:</strong> Central, Maharashtra, West Bengal, Rajasthan, Madhya Pradesh, Karnataka, Tamil Nadu. 
+                <strong>Currently available:</strong> 0. 
                 <span className="block mt-2 text-sm">
                   Click to see our complete roadmap and which states are coming next!
                 </span>

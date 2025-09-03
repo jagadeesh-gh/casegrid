@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Act } from '@/lib/types';
-import { formatFileSize } from '@/lib/utils';
 
 interface DownloadButtonProps {
   act: Act;
@@ -72,11 +71,6 @@ export default function DownloadButton({ act, variant = 'primary', className = '
         )}
       </button>
       
-      {act.sizeBytes && (
-        <p className="hidden sm:block text-xs text-gray-500 mt-1">
-          {formatFileSize(act.sizeBytes)}
-        </p>
-      )}
       
       {error && (
         <p className="text-xs text-red-500 mt-1">

@@ -14,7 +14,7 @@ export default function ActDetailsTabbed({ act, notifications }: ActDetailsTabbe
   const [activeTab, setActiveTab] = useState<'notifications' | 'forms'>('notifications');
   
   const hasNotifications = notifications.length > 0;
-  const hasForms = act.category === 'Rule' && act.forms && act.forms.length > 0;
+  const hasForms = act.forms && act.forms.length > 0;
   
   // If only one section has content, show it directly without tabs
   if (hasNotifications && !hasForms) {

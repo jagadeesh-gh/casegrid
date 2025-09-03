@@ -53,8 +53,13 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
                 </div>
                 
                 <div className="flex flex-wrap gap-2">
+                  {act.actNumber && (
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                      {act.actNumber}
+                    </span>
+                  )}
                   <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${act.state === 'Central' ? 'bg-blue-100 text-blue-800' : 'bg-blue-100 text-blue-800'}`}>
-                    {act.state === 'Central' ? 'Central' : act.state}
+                    {act.state === 'Central' ? 'Central Government' : act.state}
                   </span>
                   {act.year && (
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
@@ -68,7 +73,7 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
                   )}
                   {act.status && (
                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                      act.status === 'Active' ? 'bg-green-100 text-green-800' :
+                      act.status === 'In Force' ? 'bg-green-100 text-green-800' :
                       act.status === 'Repealed' ? 'bg-red-100 text-red-800' :
                       act.status === 'Spent' ? 'bg-yellow-100 text-yellow-800' :
                       'bg-gray-100 text-gray-800'
@@ -96,8 +101,9 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
         <table className="min-w-full divide-y divide-gray-200" role="table" aria-label="Acts and Rules Table">
           <thead className="bg-gray-50">
             <tr>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Act No.</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display w-1/4">Title</th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">State</th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Jurisdiction</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Year</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Category</th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider font-display">Status</th>
@@ -107,6 +113,9 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
           <tbody className="bg-white divide-y divide-gray-200">
             {acts.map((act) => (
               <tr key={act.id} className={`hover:bg-gray-50 transition-colors duration-150 ${act.state === 'Central' ? 'bg-blue-50' : ''}`}>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-sans">
+                  {act.actNumber || '-'}
+                </td>
                 <td className="px-6 py-4">
                   <div className="max-w-xs">
                     <Link href={`/acts/${act.slug}`} className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors duration-150 font-display leading-tight break-words">
@@ -116,7 +125,7 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${act.state === 'Central' ? 'bg-blue-100 text-blue-800' : 'bg-blue-100 text-blue-800'}`}>
-                    {act.state === 'Central' ? 'Central' : act.state}
+                    {act.state === 'Central' ? 'Central Government' : act.state}
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-sans">
@@ -132,7 +141,7 @@ export default function ActsGrid({ acts, className = '' }: ActsGridProps) {
                 <td className="px-6 py-4 whitespace-nowrap">
                   {act.status && (
                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                      act.status === 'Active' ? 'bg-green-100 text-green-800' :
+                      act.status === 'In Force' ? 'bg-green-100 text-green-800' :
                       act.status === 'Repealed' ? 'bg-red-100 text-red-800' :
                       act.status === 'Spent' ? 'bg-yellow-100 text-yellow-800' :
                       'bg-gray-100 text-gray-800'

@@ -3,6 +3,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import SearchBar from '@/components/SearchBar';
 import StateFilter from '@/components/StateFilter';
+import CategoryFilter from '@/components/CategoryFilter';
 import ActsGrid from '@/components/ActsGrid';
 import Pagination from '@/components/Pagination';
 import PageSizeSelector from '@/components/PageSizeSelector';
@@ -23,6 +24,7 @@ export default function ActsList() {
   // Get search parameters from URL
   const q = searchParams.get('q') || '';
   const state = searchParams.get('state') || '';
+  const category = searchParams.get('category') || '';
   const acts = searchParams.get('acts') !== 'false';
   const rules = searchParams.get('rules') !== 'false';
   const pageParam = searchParams.get('page');
@@ -32,13 +34,13 @@ export default function ActsList() {
   useEffect(() => {
     setIsLoading(true);
     const timer = setTimeout(() => {
-      const filtered = searchActs(SEED_ACTS, { q, state, acts, rules });
+      const filtered = searchActs(SEED_ACTS, { q, state, category, acts, rules });
       setFilteredActs(filtered);
       setIsLoading(false);
     }, 300);
 
     return () => clearTimeout(timer);
-  }, [q, state, acts, rules]);
+  }, [q, state, category, acts, rules]);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -68,7 +70,7 @@ export default function ActsList() {
   // Reset to first page when search or filter changes
   useEffect(() => {
     setCurrentPage(1);
-  }, [q, state, acts, rules]);
+  }, [q, state, category, acts, rules]);
 
   const totalPages = Math.ceil(filteredActs.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -78,12 +80,15 @@ export default function ActsList() {
   return (
     <div className="space-y-8 font-sans">
       <div className="bg-white rounded-lg shadow p-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-end">
           <div className="lg:col-span-2">
             <SearchBar placeholder="Search acts and rules..." />
           </div>
           <div>
             <StateFilter />
+          </div>
+          <div>
+            <CategoryFilter />
           </div>
         </div>
         <div className="mt-6 pt-6 border-t border-gray-200">
@@ -91,6 +96,7 @@ export default function ActsList() {
             {isLoading ? 'Searching...' : `Found ${filteredActs.length} act${filteredActs.length !== 1 ? 's' : ''}`}
             {q && ` for "${q}"`}
             {state && ` in ${state}`}
+            {category && ` in ${category}`}
             {acts && !rules && ' (Acts only)'}
             {!acts && rules && ' (Rules only)'}
             {acts && rules && ' (Acts & Rules)'}

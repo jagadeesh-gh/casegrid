@@ -155,7 +155,7 @@ export default function RootLayout({
               },
               "sameAs": [
                 "https://twitter.com/casegrid",
-                "https://linkedin.com/company/casegrid"
+                "https://linkedin.com/company/casegrid-india"
               ]
             })
           }}

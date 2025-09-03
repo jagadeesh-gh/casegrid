@@ -52,6 +52,9 @@ export default function ActDetailPage({ params }: ActDetailPageProps) {
               <Link href="/acts" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 Acts/Rules
               </Link>
+              <Link href="/request" className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                Request Missing Act/Rule
+              </Link>
             </nav>
           </div>
         </div>
@@ -90,9 +93,14 @@ export default function ActDetailPage({ params }: ActDetailPageProps) {
               <h1 className="text-2xl font-bold text-gray-900 mb-3">{act.title}</h1>
               
               <div className="flex flex-wrap gap-2 mb-4">
+                {act.actNumber && (
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                    {act.actNumber}
+                  </span>
+                )}
                 {act.state && (
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                    {act.state}
+                    {act.state === 'Central' ? 'Central Government' : act.state}
                   </span>
                 )}
                 {act.year && (
@@ -107,7 +115,7 @@ export default function ActDetailPage({ params }: ActDetailPageProps) {
                 )}
                 {act.status && (
                   <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                    act.status === 'Active' ? 'bg-green-100 text-green-800' :
+                    act.status === 'In Force' ? 'bg-green-100 text-green-800' :
                     act.status === 'Repealed' ? 'bg-red-100 text-red-800' :
                     act.status === 'Spent' ? 'bg-yellow-100 text-yellow-800' :
                     'bg-gray-100 text-gray-800'

@@ -8,18 +8,23 @@ export function searchActs(acts: Act[], filters: SearchFilters): Act[] {
     filteredActs = filteredActs.filter(act => act.state === filters.state);
   }
 
-  // Filter by category (Acts/Rules) if specified
+  // Filter by category if specified
+  if (filters.category && filters.category.trim()) {
+    filteredActs = filteredActs.filter(act => act.category === filters.category);
+  }
+
+  // Filter by document type (Acts/Rules) if specified
   if (filters.acts !== undefined || filters.rules !== undefined) {
     filteredActs = filteredActs.filter(act => {
       if (filters.acts && filters.rules) {
         // Both checked - show all
         return true;
       } else if (filters.acts && !filters.rules) {
-        // Only Acts checked
-        return act.category === 'Act';
+        // Only Acts checked - show items that are Acts
+        return act.documentType === 'Act';
       } else if (!filters.acts && filters.rules) {
-        // Only Rules checked
-        return act.category === 'Rule';
+        // Only Rules checked - show items that are Rules, Regulations, Orders, etc.
+        return act.documentType && ['Rule', 'Regulation', 'Order', 'Notification', 'Circular'].includes(act.documentType);
       } else {
         // Neither checked - show none
         return false;

@@ -10,10 +10,37 @@ export type Act = {
   id: string;
   slug: string;
   title: string;
-  state: string;
+  actNumber?: number; // e.g., 35 for "Act 35 of 2009"
+  state: string; // TODO: Consider renaming to 'jurisdiction' in future updates
   year?: number;
-  category?: 'Act' | 'Rule';
-  status?: 'Active' | 'Repealed' | 'Spent';
+  documentType?: 'Act' | 'Rule' | 'Regulation' | 'Order' | 'Notification' | 'Circular';
+  category?: 
+    | 'Governance & Administration'
+    | 'Revenue & Land Administration'
+    | 'Property & Contracts'
+    | 'Labour & Employment'
+    | 'Taxation & Finance'
+    | 'Banking, Insurance & Financial Services'
+    | 'Trade, Commerce & Industry'
+    | 'Agriculture, Animal Husbandry & Fisheries'
+    | 'Environment & Forests'
+    | 'Energy & Natural Resources'
+    | 'Transport & Infrastructure'
+    | 'Urban Development & Housing'
+    | 'Health & Family Welfare'
+    | 'Education & Research'
+    | 'Science, Technology & IT'
+    | 'Social Justice & Welfare'
+    | 'Culture, Media & Sports'
+    | 'Defence & Security'
+    | 'Police, Criminal Law & Justice'
+    | 'Courts & Legal System'
+    | 'Human Rights & Citizenship'
+    | 'Agrarian & Rural Development'
+    | 'Commerce & Consumer Affairs'
+    | 'Tourism & Hospitality'
+    | 'Miscellaneous / Special Acts';
+  status?: 'In Force' | 'Repealed' | 'Spent';
   pdfUrl: string;
   sizeBytes?: number;
   summary?: string;
@@ -36,6 +63,7 @@ export type Notification = {
 export type SearchFilters = {
   q?: string;
   state?: string;
+  category?: string;
   acts?: boolean;
   rules?: boolean;
 };
@@ -43,6 +71,7 @@ export type SearchFilters = {
 export type SearchParams = {
   q?: string;
   state?: string;
+  category?: string;
   acts?: boolean;
   rules?: boolean;
 };

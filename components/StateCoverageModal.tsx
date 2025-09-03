@@ -10,17 +10,11 @@ interface StateCoverageModalProps {
 
 // States currently available in the system
 const AVAILABLE_STATES = [
-  'Central',
-  'Maharashtra',
-  'West Bengal',
-  'Rajasthan',
-  'Madhya Pradesh',
-  'Karnataka',
-  'Tamil Nadu'
 ];
 
 // States that are coming soon (subset of all Indian states)
 const COMING_SOON_STATES = [
+  'Central',
   'Andhra Pradesh',
   'Arunachal Pradesh',
   'Assam',
@@ -35,9 +29,11 @@ const COMING_SOON_STATES = [
   'Himachal Pradesh',
   'Jammu and Kashmir',
   'Jharkhand',
+  'Karnataka',
   'Kerala',
   'Ladakh',
   'Lakshadweep',
+  'Madhya Pradesh',
   'Manipur',
   'Meghalaya',
   'Mizoram',
@@ -45,11 +41,15 @@ const COMING_SOON_STATES = [
   'Odisha',
   'Puducherry',
   'Punjab',
+  'Rajasthan',
   'Sikkim',
+  'Tamil Nadu',
   'Telangana',
   'Tripura',
   'Uttar Pradesh',
-  'Uttarakhand'
+  'Uttarakhand',
+  'Maharashtra',
+  'West Bengal',
 ];
 
 export default function StateCoverageModal({ isOpen, onClose }: StateCoverageModalProps) {

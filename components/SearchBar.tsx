@@ -68,9 +68,9 @@ export default function SearchBar({ placeholder = 'Search...', className = '' }:
         />
       </div>
       
-      {/* Category Checkboxes */}
+      {/* Document Type Checkboxes */}
       <div className="flex items-center space-x-6 bg-gray-50 px-4 py-3 rounded-lg border border-gray-200">
-        <span className="text-sm font-medium text-gray-700 font-display">Categories:</span>
+        <span className="text-sm font-medium text-gray-700 font-display">Document Type:</span>
         <label className="flex items-center space-x-2 cursor-pointer">
           <input
             type="checkbox"
@@ -78,7 +78,7 @@ export default function SearchBar({ placeholder = 'Search...', className = '' }:
             onChange={handleActsChange}
             className="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
           />
-          <span className="text-sm font-medium text-gray-700 font-sans">Acts</span>
+          <span className="text-sm font-medium text-gray-700 font-sans">Act</span>
         </label>
         
         <label className="flex items-center space-x-2 cursor-pointer">
@@ -88,7 +88,7 @@ export default function SearchBar({ placeholder = 'Search...', className = '' }:
             onChange={handleRulesChange}
             className="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
           />
-          <span className="text-sm font-medium text-gray-700 font-sans">Rules</span>
+          <span className="text-sm font-medium text-gray-700 font-sans">Rule</span>
         </label>
       </div>
     </div>

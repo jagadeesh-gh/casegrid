@@ -27,7 +27,7 @@ export default function StateFilter() {
   return (
     <div className="space-y-2">
       <label htmlFor="state-filter" className="block text-sm font-medium text-gray-700 font-display">
-        Filter by State
+        Filter by Jurisdiction
       </label>
       <div className="relative">
         <select
@@ -35,14 +35,14 @@ export default function StateFilter() {
           value={currentState}
           onChange={(e) => handleStateChange(e.target.value)}
           className="block w-full px-3 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm font-sans"
-          aria-label="Select state to filter acts"
+          aria-label="Select jurisdiction to filter acts"
         >
-          <option value="">Select a state</option>
-          {INDIAN_STATES.map((state) => (
-            <option key={state} value={state}>
-              {state === 'Central' ? 'Central' : state}
-            </option>
-          ))}
+          <option value="">Select a jurisdiction</option>
+                      {INDIAN_STATES.map((state) => (
+              <option key={state} value={state}>
+                {state === 'Central' ? 'Central Government' : state}
+              </option>
+            ))}
         </select>
       </div>
     </div>
